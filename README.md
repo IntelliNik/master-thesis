@@ -12,20 +12,15 @@ This repository contains the code model training and the user interface for infe
 # Folder Structure
 - `code` contains the code for model `training` and `inference` of video background music
 - `code/inference/gradio_app` contains the code for the interface to generate video background music
-- `datasets` contains the code to create the datasets used for training within `dataset_preparation` and the videos used for training examples in the respective `nature` and `symmv` folders
-- `evaluation` contains the code used to calculate the FAD scored and the ResNet embedding anaylsis of the applied datasets
-- `videos` contains examplary videos used in our case study and for the Gradio interface
-- `jamovia_anova.omv` containts our statstical calculations for our ANOVA analysis of our quantitative study results.
 
 # Training
-To train the models adjust the training parameters under `training/training_conf.yml` and start training with 
+To train the models, adjust the training parameters under `training/training_conf.yml` and start training with 
 `python training/training.py`. The models finished models will be stored under `models/*`.
 
 # Inference
 - download the available pretrained models from here [https://huggingface.co/schnik/video-background-music-generation/tree/main](https://huggingface.co/schnik/video-background-music-generation/tree/main)
-- place the unzipped directories for the respecive pretrained model in the `/models` folder
+- place the unzipped directories for the respective pretrained model in the `/models` folder
 - start the Gradio interface by running `python gradio_app/app.py`
-- alternatively a hosted version of the interface displaying cached results is available on Huggingface: [https://huggingface.co/spaces/schnik/video-background-music-generator](https://huggingface.co/spaces/schnik/video-background-music-generator)
 
 # Contact
-For any questions contact me at [niklas.schulte@rwth-aachen.de](mailto:niklas.schulte@rwth-aachen.de)
+For any questions, contact me at [niklas.schulte@rwth-aachen.de](mailto:niklas.schulte@rwth-aachen.de)
