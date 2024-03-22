@@ -1,0 +1,47 @@
+# LOGGING
+log_level: "INFO"
+
+# TRAINING LOOP
+num_epochs: 4
+batch_size: 2
+save_step: 800
+device: "cuda"
+
+# WANDB
+use_wandb: true
+wandb_project_name: "pe_30"
+
+# OPTIMIZER
+gradient_clipping: 1.0
+beta1: 0.9  # from audiocraft
+beta2: 0.95  # from audiocraft
+weight_decay: 0.1  # from audiocraft
+learning_rate: 1e-5
+
+# VIDEO ENCODER
+video_extraction_framerate: 1
+encoder_input_dimension: 2048  # determined by ResNet
+encoder_dim_feedforward: 8192
+encoder_heads: 16
+encoder_layers: 6
+
+# MUSICGEN
+musicgen_model_id: "facebook/musicgen-stereo-small"
+
+# PEFT PARAMETERS
+use_peft: false
+lora_r: 16
+lora_alpha: 16
+lora_dropout: 0.1
+
+# OUTPUT FOLDER
+output_dir_name: "nature_small"
+
+# DATASET
+dataset_video_folder: "../../datasets/nature/videos_30sec"
+dataset_audio_folder: "../../datasets/nature/audio_30sec"
+#dataset_audio_folder: "../../datasets/symmv/audio_30sec_separated"
+use_demucs_folder_structure: false
+dataset_validation_split: 0.1
+dataset_test_split: 0.1
+dataset_shuffling_seed: 42
